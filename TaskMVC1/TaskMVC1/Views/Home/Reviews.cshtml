@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Reviews";
+    @Styles.Render("~/Content/main-styles")
+}
+@Styles.Render("~/Content/reviews")
+<div class="row">
+    <div class="col-12">
+        @using (Html.BeginForm())
+        {
+            <div class="input-group">
+                <input type="text" class="form-control" value="@System.DateTime.Now.Date.ToString("dd.MM.yyyy")" disabled />
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" for="name">Имя</span>
+                </div>
+                <input id="name" type="text" class="form-control" required pattern="[A-Za-z]{1,}" />
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span for="review" class="input-group-text">Отзыв</span>
+                </div>
+                <textarea id="review" class="form-control" required></textarea>
+            </div>
+            <div class="input-group">
+                <span class="btn btn-success">Отправить</span>
+            </div>
+        }
+    </div>
+    <hr class="col-12" />
+    <div class="col-12 row reviews">
+        <div class="col-4">
+            Кулешов Арнольд
+        </div>
+        <div class=" col-6 text-right">
+            12.06.2019
+        </div>
+        <div class="col-12">
+            Все очень интересно и понятно.
+        </div>
+    </div>
+    <hr class="col-12" />
+    <div class="col-12 row reviews">
+        <div class="col-4">
+            Иванов Евгений
+        </div>
+        <div class=" col-6 text-right">
+            06.01.2019
+        </div>
+        <div class="col-12">
+            Купил свой первый мустанг, очень рад.
+        </div>
+    </div>
+    <hr class="col-12" />
+    <div class="col-12 row reviews">
+        <div class="col-4">
+            Демченко Роман
+        </div>
+        <div class=" col-6 text-right">
+            12.12.2018
+        </div>
+        <div class="col-12">
+            Считаю, что это лучшая марка авто.
+        </div>
+    </div>
+    <hr class="col-12" />
+    <div class="col-12 row reviews">
+        <div class="col-4">
+            Солодовников Василий
+        </div>
+        <div class=" col-6 text-right">
+            11.11.2018
+        </div>
+        <div class="col-12">
+            Скоро накоплю на последнюю модель.
+        </div>
+    </div>
+    <hr class="col-12" />
+    <div class="col-12 row reviews">
+        <div class="col-4">
+            Марченко Эдуард
+        </div>
+        <div class=" col-6 text-right">
+            12.09.2018
+        </div>
+        <div class="col-12">
+            Считаю, что мощность важнее внешнего вида.
+        </div>
+    </div>
+</div>
